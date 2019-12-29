@@ -67,6 +67,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -130,6 +131,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Demo\Default.aspx" />
     <Content Include="Demo\GridView_DataTable.aspx" />
+    <Content Include="Demo\GridView_DataTable_2.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -155,6 +157,14 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="App_Code\Data\WebApp.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>WebApp.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="App_Code\Data\WebApp.dbml.layout">
+      <DependentUpon>WebApp.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -284,6 +294,12 @@
     <Compile Include="App\Fonction.aspx.designer.cs">
       <DependentUpon>Fonction.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\DataBaseHandler.cs" />
+    <Compile Include="App_Code\Data\WebApp.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebApp.dbml</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -320,6 +336,13 @@
     </Compile>
     <Compile Include="Demo\GridView_DataTable.aspx.designer.cs">
       <DependentUpon>GridView_DataTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demo\GridView_DataTable_2.aspx.cs">
+      <DependentUpon>GridView_DataTable_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo\GridView_DataTable_2.aspx.designer.cs">
+      <DependentUpon>GridView_DataTable_2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -365,6 +388,7 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>

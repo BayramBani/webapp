@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="webapp_db" Class="WebAppDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=webapp_db;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="webapp_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AGENT" Member="AGENT">
+    <Type Name="AGENT">
+      <Column Name="MATRICULE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOM" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PRENOM" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CIN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_NAISSANCE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TELEPHONE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VILLE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ADRESSE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FONCTION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FONCTION_AGENT" Member="FONCTION1" ThisKey="FONCTION" OtherKey="ID" Type="FONCTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FONCTION" Member="FONCTION">
+    <Type Name="FONCTION">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LIBELLE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FONCTION_AGENT" Member="AGENT" ThisKey="ID" OtherKey="FONCTION" Type="AGENT" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="WebApp">
+  <DataContextMoniker Name="/WebAppDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f0a1b1f1-0856-4d42-ac00-a31169c50832" absoluteBounds="0.5, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/WebAppDataContext/AGENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37914a33-0c40-4635-a565-b63a47bfbbd8" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45dcc00a-206f-43d0-a740-6f88768643aa" absoluteBounds="0.5, 3.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/WebAppDataContext/FONCTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b866b78-e61d-44ec-8e5c-f82222d3f911" absoluteBounds="0.51499999999999968, 3.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 3.5); (1.5 : 3.23240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WebAppDataContext/FONCTION/FONCTION_AGENT" />
+      <nodes>
+        <classShapeMoniker Id="45dcc00a-206f-43d0-a740-6f88768643aa" />
+        <classShapeMoniker Id="f0a1b1f1-0856-4d42-ac00-a31169c50832" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
